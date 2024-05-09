@@ -1,4 +1,4 @@
-package 심화1;
+package advanced1;
 
 import java.util.Scanner;
 
