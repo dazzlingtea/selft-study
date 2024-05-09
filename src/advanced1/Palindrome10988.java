@@ -7,7 +7,7 @@ public class Palindrome10988 {
         Scanner sc = new Scanner(System.in);
 
         String word = sc.nextLine();
-        int half = (int) Math.floor(word.length() / 2);
+        int half = (int) Math.floor(word.length() / 2.0);
 
         for (int i = 0; i < half; i++) {
             if(word.charAt(i) != word.charAt(word.length() -i -1)) {
