@@ -1,3 +1,5 @@
+package before;
+
 import java.util.Scanner;
 
 class Shape {
@@ -34,12 +36,12 @@ public class day8ShapeAppEx {
 		Shape last = new Shape();
 		Shape obj = new Shape();
 		
-		System.out.println("³ëµåÀÇ °³¼ö¸¦ ÀÔ·Â");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½");
 		int nodes = sc.nextInt();
 		sc.nextLine();
 		
 		for(int i=1; i<=nodes; i++) {
-			System.out.println("µµÇü ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			String input = sc.nextLine();
 			if(i == 1) {
 				switch(input) {

@@ -1,3 +1,5 @@
+package before;
+
 import java.io.*;
 public class RemainArray3052 {
 	public static void main(String[] args) throws IOException {

@@ -1,4 +1,5 @@
-import java.util.*;
+package before;
+
 import java.io.*;
 
 public class LowNum10871 {
@@ -10,7 +11,7 @@ public class LowNum10871 {
 		int X = Integer.parseInt(b1[1]);
 		
 //		BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
-		// BufferedReader´Â ÇÑ ¹ø¸¸ ¼±¾ðÇÏ°í ±× µÚ¿£ ´ëÀÔÇØ¼­ ¾²±â
+		// BufferedReaderï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 		String[] b2 = br1.readLine().split(" ");
 		for(int i=0; i<N; i++) {
 			int n = Integer.parseInt(b2[i]);

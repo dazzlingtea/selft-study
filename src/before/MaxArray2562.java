@@ -1,3 +1,5 @@
+package before;
+
 import java.util.*;
 
 public class MaxArray2562 {

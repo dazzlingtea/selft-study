@@ -1,3 +1,5 @@
+package before;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,12 +10,12 @@ public class math2745 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		String N = st.nextToken(); //BÁø¹ýÀÇ °ªÀÎ N
-		int B = Integer.parseInt(st.nextToken()); //¸î Áø¹ýÀÎÁö
+		String N = st.nextToken(); //Bï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ N
+		int B = Integer.parseInt(st.nextToken()); //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		br.close();
 		
-		int digit = 1; // ÀÚ¸´¼ö
-		int sum = 0; // Ãâ·ÂÇÒ ¼ýÀÚ
+		int digit = 1; // ï¿½Ú¸ï¿½ï¿½ï¿½
+		int sum = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
 		for(int i = N.length()-1 ; i >= 0; i--) {
 			char C = N.charAt(i);

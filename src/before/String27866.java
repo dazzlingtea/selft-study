@@ -1,3 +1,5 @@
+package before;
+
 import java.util.Scanner;
 public class String27866 {
 

@@ -1,3 +1,5 @@
+package before;
+
 import java.io.*;
 
 public class MissedAssignment5597 {
