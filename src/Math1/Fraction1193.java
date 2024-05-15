@@ -2,7 +2,7 @@ package Math1;
 
 import java.util.Scanner;
 
-public class fraction1193 {
+public class Fraction1193 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
