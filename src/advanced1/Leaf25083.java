@@ -1,6 +1,6 @@
 package advanced1;
 
-public class leaf25083 {
+public class Leaf25083 {
     public static void main(String[] args) {
         System.out.println("         ,r'\"7");
         System.out.println("r`-_   ,'  ,/");
