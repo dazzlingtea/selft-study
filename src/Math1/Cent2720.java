@@ -1,3 +1,4 @@
+package Math1;
 import java.util.Scanner;
 
 public class Cent2720 {
