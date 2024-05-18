@@ -3,7 +3,6 @@ package array2d;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class MatrixPlus2738 {
@@ -21,7 +20,7 @@ public class MatrixPlus2738 {
             for (int j = 0; j < m; j++) {
                 resultArr[i % n][j] +=Integer.parseInt(st.nextToken());
                 if(i >= n) {
-                    sb.append(resultArr[i %n][j] + " ");
+                    sb.append(resultArr[i % n][j] + " ");
                 }
             }
             if(i >= n) sb.append("\n");
