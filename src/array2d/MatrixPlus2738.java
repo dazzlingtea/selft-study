@@ -20,7 +20,7 @@ public class MatrixPlus2738 {
             for (int j = 0; j < m; j++) {
                 resultArr[i % n][j] +=Integer.parseInt(st.nextToken());
                 if(i >= n) {
-                    sb.append(resultArr[i % n][j] + " ");
+                    sb.append(resultArr[i % n][j]).append(" ");
                 }
             }
             if(i >= n) sb.append("\n");
