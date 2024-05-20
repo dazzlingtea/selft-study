@@ -29,5 +29,28 @@ neither
  */
 
 
+import java.util.Scanner;
+
 public class FactorMultiple5086 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        StringBuilder sb = new StringBuilder();
+
+        while (a != 0 && b != 0) {
+            if(a%b == 0){
+                sb.append("multiple").append("\n");
+            } else if( b%a == 0){
+                sb.append("factor").append("\n");
+            } else {
+                sb.append("neither").append("\n");
+            }
+            a = sc.nextInt();
+            b = sc.nextInt();
+        }
+
+        System.out.println(sb);
+    }
 }
