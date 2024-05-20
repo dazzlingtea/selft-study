@@ -1,4 +1,4 @@
-package FactorPrime;
+package factorprime;
 
 /*
 4 × 3 = 12이다.
