@@ -1,6 +1,7 @@
 package factorprime;
 
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Factor2501 {
     public static void main(String[] args) {
@@ -9,13 +10,21 @@ public class Factor2501 {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int[] arr = new int[n];
+        List<Integer> factors = new ArrayList<>();
 
-        for (int i = 0; i < Math.floor(Math.sqrt(n)); i++) {
+        for (int i = 1; i <= Math.sqrt(n); i++) {
             if(n % i == 0){
-                arr[i] = i;
+                factors.add(i);
+                if(i != n / i) {
+                    factors.add(n / i);
+                }
             }
         }
-
+        if(factors.size() < k) {
+            System.out.println(0);
+        } else {
+            Collections.sort(factors);
+            System.out.println(factors.get(k-1));
+        }
     }
 }
