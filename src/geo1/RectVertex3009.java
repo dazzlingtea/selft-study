@@ -10,24 +10,21 @@ public class RectVertex3009 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        Set<Integer> xSet = new HashSet<Integer>();
-        Set<Integer> ySet = new HashSet<Integer>();
-//        int[] xArr = new int[3];
-//        int[] yArr = new int[3];
-        int resultX = 0;
-        int resultY = 0;
+        String[] coord1 = br.readLine().split(" ");
+        String[] coord2 = br.readLine().split(" ");
+        String[] coord3 = br.readLine().split(" ");
 
-        StringTokenizer st;
-        for (int i = 0; i < 3; i++) {
-            st = new StringTokenizer(br.readLine());
-//            xArr[i] = Integer.parseInt(st.nextToken());
-//            yArr[i] = Integer.parseInt(st.nextToken());
-            int a = Integer.parseInt(st.nextToken());
-            if(xSet.contains(a)) xSet.remove(a);
+        String x, y;
 
-            int b = Integer.parseInt(st.nextToken());
-            if(ySet.contains(b)) ySet.remove(b);
-        }
+        if(coord1[0].equals(coord2[0])) x = coord3[0];
+        else if(coord1[0].equals(coord3[0])) x = coord2[0];
+        else x = coord1[0];
+
+        if(coord1[1].equals(coord2[1])) y = coord3[1];
+        else if(coord1[1].equals(coord3[1])) y = coord2[1];
+        else y = coord1[1];
+
+        System.out.println(x + " " + y);
 
     }
 }
