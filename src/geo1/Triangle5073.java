@@ -25,7 +25,7 @@ public class Triangle5073 {
 
             if(arr[2] >= arr[0] + arr[1]) {
                 System.out.println("Invalid");
-            } else if (a == b && b == c) {
+            } else if (a == b && b == c && c == a) {
                 System.out.println("Equilateral");
             } else if(a == b || b == c || c == a) {
                 System.out.println("Isosceles");
