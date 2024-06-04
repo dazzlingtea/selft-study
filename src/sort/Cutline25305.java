@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.util.stream.IntStream;
 
 public class Cutline25305 {
     public static void main(String[] args) throws IOException {
