@@ -11,15 +11,15 @@ public class Coordinate11650 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int n = Integer.parseInt(br.readLine());
-        List<Coordinate> list = new ArrayList<>();
+        List<Crd> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
-            list.add(new Coordinate(Integer.parseInt(st.nextToken())
+            list.add(new Crd(Integer.parseInt(st.nextToken())
                     , Integer.parseInt(st.nextToken())));
         }
         list = list.stream()
-                .sorted(Comparator.comparing(Coordinate::getX)
-                        .thenComparing(Coordinate::getY))
+                .sorted(Comparator.comparing(Crd::getX)
+                        .thenComparing(Crd::getY))
                 .collect(Collectors.toList());
 
         list.forEach(c -> c.print());
