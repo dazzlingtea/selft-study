@@ -1,0 +1,46 @@
+package sort;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Coordinate11651 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        int n = Integer.parseInt(br.readLine());
+        List<Crd> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            st = new StringTokenizer(br.readLine());
+            list.add(new Crd(Integer.parseInt(st.nextToken())
+                    , Integer.parseInt(st.nextToken())));
+        }
+        list = list.stream()
+                .sorted(Comparator.comparing(Crd::getY)
+                        .thenComparing(Crd::getX))
+                .collect(Collectors.toList());
+
+        list.forEach(c -> c.print());
+
+    }
+}
+class Crd {
+    int x;
+    int y;
+    Crd(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    int getX() { return this.x; }
+    void setX(int x) { this.x = x; }
+    int getY() { return this.y; }
+    void setY(int y) { this.y = y; }
+
+    void print() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.x).append(" ").append(this.y);
+        System.out.println(sb);
+    }
+}
