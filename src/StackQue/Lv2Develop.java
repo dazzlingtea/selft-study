@@ -50,7 +50,7 @@ public class Lv2Develop {
 
         System.out.println(list);
 
-        // 미리 완료일을 구하여 큐 관리
+//         미리 완료일을 구하여 큐 관리
 //        class Solution {
 //            public int[] solution(int[] progresses, int[] speeds) {
 //                Queue<Integer> q = new LinkedList<>();
