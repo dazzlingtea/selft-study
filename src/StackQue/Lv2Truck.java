@@ -1,8 +1,6 @@
 package StackQue;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /*
     제한 조건
@@ -12,28 +10,35 @@ import java.util.Queue;
     모든 트럭의 무게는 1 이상 weight 이하입니다.
  */
 class Solution {
-
     public int solution(int bridge_length, int weight, int[] truck_weights) {
-        int passingWeight = 0;
-        int answer = 0;
-        Queue<Integer[]> queue = new LinkedList<>();
+        Queue<int[]> afterBridge = new LinkedList<>();
+        Queue<Integer> trucks = new LinkedList<>();
+        for(int target : truck_weights){
+            trucks.add(target);
+        }
 
-        for (int i = 0; i < truck_weights.length; i++) {
-            int truckWeight = truck_weights[i];
-            if (queue.size() < bridge_length
-                    && passingWeight + truckWeight <= weight
-            ) {
-                queue.add(truckWeight);
-                passingWeight += truckWeight;
-            } else {
-                answer++;
-                queue.poll();
+        int currWeight = 0;
+        int time = 0;
+        while(!trucks.isEmpty() || !afterBridge.isEmpty()){
+            if(!afterBridge.isEmpty()
+                    && afterBridge.peek()[0] <= time
+            ){
+                int [] temp = afterBridge.poll();
+                currWeight -= temp[1];
             }
 
+            if(!trucks.isEmpty()
+                    && afterBridge.size() + 1 <= bridge_length
+                    && currWeight + trucks.peek() <= weight
+            ){
+                int temp = trucks.poll();
+                currWeight += temp;
+                afterBridge.add(new int [] {time + bridge_length,temp});
+            }
+            time++;
         }
-        return answer;
+        return time;
     }
-
 }
 
 public class Lv2Truck {
