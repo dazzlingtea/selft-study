@@ -1,6 +1,7 @@
 package hash;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -16,8 +17,8 @@ import java.util.Map;
  */
 public class Clothes {
     public static void main(String[] args) {
-        String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
-//        String[][] clothes = {{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}};
+//        String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}}; // 5
+        String[][] clothes = {{"crow_mask", "face"}, {"blue_sunglasses", "face"}, {"smoky_makeup", "face"}}; // 3
 
         int solution = new SolutionClothes().solution(clothes);
         System.out.println(solution);
@@ -27,14 +28,26 @@ class SolutionClothes {
     public int solution(String[][] clothes) {
         Map<String, Integer> map = new HashMap<>();
         for (String[] cloth : clothes) {
-            if (map.containsKey(cloth[1])) map.put(cloth[1], map.get(cloth[1]) + 1);
-            else map.put(cloth[1], 1);
+            String type = cloth[1];
+            map.put(type, map.getOrDefault(type,0) + 1);
         }
-        int kindCnt = map.size();
-        int answer = kindCnt * (kindCnt-1);
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            answer *= entry.getValue();
+        Iterator<Integer> iter = map.values().iterator();
+        int answer = 1;
+        while (iter.hasNext()) {
+            answer *= iter.next() + 1;
         }
-        return answer;
+
+        return answer - 1; // 아무것도 선택하지 않은 경우 제외
     }
 }
+/*
+    class Solution {
+    public int solution(String[][] clothes) {
+        return Arrays.stream(clothes)
+                .collect(groupingBy(p -> p[1], mapping(p -> p[0], counting())))
+                .values()
+                .stream()
+                .collect(reducing(1L, (x, y) -> x * (y + 1))).intValue() - 1;
+    }
+
+ */
