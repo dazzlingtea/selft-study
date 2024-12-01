@@ -39,13 +39,13 @@ public class Maze2178 {
         while(!q.isEmpty()) {
             int[] cur = q.poll();
             for (int k = 0; k < 4; k++) {
-                int x = cur[0] + dx[k];
-                int y = cur[1] + dy[k];
-                if(x >= 0 && x < N && y >= 0 && y < M) { // 배열을 넘어가면 안되고
-                    if(A[x][y] != 0 && !visited[x][y]) { // 유효한 길이고 방문한 적 없을 때
-                        visited[x][y] = true;
-                        A[x][y] = A[cur[0]][cur[1]] + 1;
-                        q.add(new int[] {x, y});
+                int row = cur[0] + dx[k]; // row (y축)
+                int col = cur[1] + dy[k]; // col (x축)
+                if (row >= 0 && row < N && col >= 0 && col < M) {
+                    if (A[row][col] != 0 && !visited[row][col]) {
+                        visited[row][col] = true;
+                        A[row][col] = A[cur[0]][cur[1]] + 1;
+                        q.add(new int[] {row, col});
                     }
                 }
             }
