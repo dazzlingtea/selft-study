@@ -1,4 +1,4 @@
-package dfs;
+package dfsBfs;
 // 방향 없는 그래프가 주어졌을 때,
 // 연결 요소 (Connected Component)의 개수를 구하는 프로그램을 작성하시오
 // 첫째 줄에 정점의 개수 N과 간선의 개수 M (1 ≤ N ≤ 1,000, 0 ≤ M ≤ N×(N-1)/2)
