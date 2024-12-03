@@ -14,14 +14,8 @@ public class Card2164 {
         }
         System.out.println("카드: " + q);
         while (q.size() > 1) {
-//            if(q.size() < 2) {
-//                System.out.println(q.poll());
-//                break;
-//            }
             q.poll();
-//            System.out.println(q);
             q.add(q.poll());
-//            System.out.println(q);
         }
         System.out.println(q.poll());
     }
