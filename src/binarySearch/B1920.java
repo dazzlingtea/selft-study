@@ -56,7 +56,7 @@ public class B1920 {
 
 }
 /* 가독성
-int start; int end; boolean flag;
+- 지역 scope로 메모리 사용은 다소 증가할 수 있으나 외부에서 변경 불가
 for(int i = 0; i < M; i++) {
     int target = Integer.parseInt(st.nextToken());
     int start = 0;
